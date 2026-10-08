@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://winston-tao1.github.io/gymwatch-support/sitemap.xml
