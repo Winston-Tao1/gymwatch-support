@@ -40,3 +40,6 @@
 .phone-back{left:24px}.phone-front{right:24px}
 @media(max-width:760px){.phone-back{left:18px}.phone-front{right:18px}}
 @media(max-width:760px){.watch-showcase>.watch.front{width:min(400px,100%)}}
+
+/* Keep the localized persona headline readable on narrow screens. */
+@media(max-width:760px){html[lang=en] .hero h1{font-size:clamp(30px,8vw,60px)}}
