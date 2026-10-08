@@ -3,6 +3,8 @@
 from pathlib import Path
 from html import escape
 import json
+from hashlib import sha256
+from functools import lru_cache
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '/gymwatch-support/'
 ORIGIN = 'https://winston-tao1.github.io'
@@ -11,17 +13,26 @@ EMAIL = CONFIG.get('support_email', '')
 ISSUES = 'https://github.com/Winston-Tao1/gymwatch-support/issues/new/choose'
 DATE = '2026-10-08'
 
+@lru_cache(maxsize=None)
+def asset_url(name):
+    version = sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:10]
+    return f'{BASE}assets/{name}?v={version}'
+
 def img(name, alt='', cls='', eager=False):
     if name.endswith('.png') and (ROOT/'assets'/name.replace('.png','.webp')).exists():
         name=name.replace('.png','.webp')
-    return f'<img src="{BASE}assets/{name}" alt="{escape(alt)}" class="{cls}" loading="{"eager" if eager else "lazy"}" decoding="async">'
+    return f'<img src="{asset_url(name)}" alt="{escape(alt)}" class="{cls}" loading="{"eager" if eager else "lazy"}" decoding="async">'
 
 def phone(name,alt,cls=''):
-    return f'<div class="phone {cls}">{img("simulator-iphone.png", "", "device-frame", eager=True)}<div class="phone-display">{img(name,alt,eager=True)}<i class="island"></i></div></div>'
+    capture = name.replace('iphone-', 'iphone-full-', 1)
+    return f'<div class="phone {cls}"><div class="phone-capture">{img(capture,alt,eager=True)}</div></div>'
 
 def watch(name,alt,kind='ultra',cls=''):
     frame = 'simulator-ultra4.png' if cls == 'front' else ('apple-ultra4.png' if kind == 'ultra' else 'apple-series12.png')
-    return f'<div class="watch {kind} {cls}">{img(frame, "", "device-frame", eager=True)}<div class="watch-display">{img(name,alt,eager=True)}</div></div>'
+    components = ''
+    if name == 'watch-cyber.png':
+        components = f'<div class="face-cut-mode">{img("watch-cut-mode.png", "减脂模式圆形组件 / Cut mode complication", eager=True)}</div><div class="face-cyber-level">{img("watch-cyber-level1.png", "第一阶段赛博科技组件 / Level I Cyber Tech", eager=True)}</div>'
+    return f'<div class="watch {kind} {cls}">{img(frame, "", "device-frame", eager=True)}<div class="watch-display">{img(name,alt,eager=True)}{components}</div></div>'
 
 def page_path(zh, page=''):
     return BASE + ('zh/' if zh else '') + (page+'/' if page else '')
@@ -37,7 +48,7 @@ def shell(zh, page, title, desc, body):
     other=page_path(not zh,page)
     nav=[('watch','Apple Watch'),('iphone','iPhone')]
     return f'''<!doctype html>
-<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080c10"><title>{escape(title)}</title><meta name="description" content="{escape(desc)}"><link rel="icon" href="{BASE}assets/icon.webp"><link rel="apple-touch-icon" href="{BASE}assets/icon.webp"><link rel="canonical" href="{ORIGIN}{page_path(zh,page)}"><link rel="alternate" hreflang="en" href="{ORIGIN}{page_path(False,page)}"><link rel="alternate" hreflang="zh-Hans" href="{ORIGIN}{page_path(True,page)}"><link rel="alternate" hreflang="x-default" href="{ORIGIN}{page_path(False,page)}"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{ORIGIN}{page_path(zh,page)}"><meta property="og:image" content="{ORIGIN}{BASE}assets/icon.webp"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="{BASE}assets/site.css"><script defer src="{BASE}assets/site.js"></script></head>
+<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080c10"><title>{escape(title)}</title><meta name="description" content="{escape(desc)}"><link rel="icon" href="{BASE}assets/icon.webp"><link rel="apple-touch-icon" href="{BASE}assets/icon.webp"><link rel="canonical" href="{ORIGIN}{page_path(zh,page)}"><link rel="alternate" hreflang="en" href="{ORIGIN}{page_path(False,page)}"><link rel="alternate" hreflang="zh-Hans" href="{ORIGIN}{page_path(True,page)}"><link rel="alternate" hreflang="x-default" href="{ORIGIN}{page_path(False,page)}"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{ORIGIN}{page_path(zh,page)}"><meta property="og:image" content="{ORIGIN}{BASE}assets/icon.webp"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="{asset_url('site.css')}"><script defer src="{BASE}assets/site.js"></script></head>
 <body class="{'home-page' if not page else 'document-page'}"><a class="skip" href="#main">{'跳到正文' if zh else 'Skip to content'}</a>
 <header class="site-header"><div class="nav-wrap"><a class="brand" href="{home}">{img('icon.png','',eager=True)}<span>{'健身人' if zh else 'Gym Watch'}</span></a><nav aria-label="{'主导航' if zh else 'Main navigation'}">{''.join(f'<a class="product-nav" href="{home}#{anchor}">{label}</a>' for anchor,label in nav)}<a href="{page_path(zh,'support')}">{'支持' if zh else 'Support'}</a><a href="{page_path(zh,'privacy')}">{'隐私' if zh else 'Privacy'}</a><a class="language" href="{other}" lang="{'en' if zh else 'zh-Hans'}" aria-label="{'Switch to English' if zh else '切换至简体中文'}">{'EN' if zh else '中文'}</a></nav></div></header>
 <main id="main">{body}</main>

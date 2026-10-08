@@ -2,25 +2,25 @@
 @media(min-width:900px){html[lang=zh-Hans] h1{letter-spacing:-.065em}html[lang=zh-Hans] .hero h1{line-height:1.17}html[lang=zh-Hans] h2{letter-spacing:-.05em}}
 @media(max-width:1000px){.hero-devices{gap:40px}.hero-watch{width:195px}.hero-phone{width:235px}.watch-feature{gap:45px}.watch-showcase>.watch{width:250px}.orbit{width:390px;height:390px}.orbit-two{width:500px;height:500px}.phone-feature{gap:45px}.phone-pair>.phone{width:225px}.phone-pair{min-height:620px}.feature-ribbon{margin-left:28px;margin-right:28px}.persona-item img{height:155px}.support-layout,.policy-layout{gap:40px;grid-template-columns:180px 1fr}}
 @media(max-width:760px){.section{padding:76px 24px}.nav-wrap{height:74px;padding:0 24px}.brand{font-size:16px;gap:9px}.brand img{width:31px;height:31px;border-radius:9px}.site-header nav{gap:18px;font-size:12px}.product-nav{display:none}.language{padding:7px 10px}h1{font-size:64px}h2{font-size:42px}.hero{padding-top:55px;padding-bottom:25px}.hero-sub{font-size:15px;max-width:320px;margin:20px auto 6px}.hero-devices{gap:19px;min-height:390px;margin-top:28px}.hero-watch{width:140px}.hero-phone{width:180px}.hero-watch.first{margin-right:-18px}.hero-watch.last{margin-left:-18px}.device-caption{font-size:7px;margin-top:20px}.hero .preview-note{font-size:9px;margin-top:10px}.feature-ribbon{display:grid;grid-template-columns:1fr 1fr;gap:18px;font-size:11px;margin:22px 24px 0;padding:24px 0}.intro{padding-top:86px;padding-bottom:76px}.lead{font-size:16px;line-height:1.9;margin-top:24px}.watch-feature{grid-template-columns:1fr;gap:35px;padding-top:10px}.watch-showcase{min-height:500px;order:2}.watch-showcase>.watch{width:250px}.orbit{width:370px;height:370px}.orbit-two{width:480px;height:480px}.section-copy{max-width:550px;margin:auto}.feature-list{display:none}.widget-section{padding-top:50px}.widget-grid{grid-template-columns:1fr;gap:16px;margin-top:36px;max-width:470px;margin-left:auto;margin-right:auto}.widget-tile{padding:23px}.widget-tile img{max-width:350px;margin:0 auto 20px}.widget-tile p{font-size:14px}.persona-grid{grid-template-columns:repeat(3,1fr);gap:10px;margin:40px 0 0}.persona-item img{height:190px}.persona-item:nth-child(2n){transform:none}.persona-item:hover{transform:translateY(-7px)}.phone-feature{grid-template-columns:1fr;gap:30px;padding-top:40px}.phone-pair{min-height:590px;max-width:450px;width:100%;margin:auto;order:2}.phone-pair>.phone{width:215px}.phone-back{left:10px;top:10px}.phone-front{right:5px;top:55px}.privacy-feature{padding-top:76px}.final-cta{padding-bottom:85px}.final-cta h2{font-size:37px}.search-pill{max-width:365px}.document-hero{padding-top:65px;padding-bottom:60px}.document-hero h1{font-size:59px}.support-layout,.policy-layout{display:block;padding-top:0}.support-layout>aside,.policy-layout>aside{display:none}.support-layout h2{font-size:27px}.setup-grid{gap:11px}.setup-grid article{padding:20px 15px}.setup-grid h3{font-size:14px}.setup-grid p{font-size:12px}.contact-card{padding:25px}.policy h2{font-size:20px}.policy-summary{padding:23px}.policy section>p{font-size:14px}.footer-top{align-items:flex-start;flex-wrap:wrap;gap:20px}.footer-top>p{width:100%;order:3}.footer-top>div{gap:20px}.footer-bottom{margin-top:32px}.trademark{font-size:9px}.preview-note{font-size:10px}}
-@media(max-width:430px){h1{font-size:55px}.hero-devices{gap:6px;min-height:340px;margin-left:-20px;margin-right:-20px}.hero-watch{width:112px}.hero-phone{width:158px}.hero-watch.first{margin-right:-5px}.hero-watch.last{margin-left:-5px}.hero-watch .device-caption{font-size:6px}.phone{padding:5px}.watch-case{padding:7.8% 6.4%}.watch-display{box-shadow:0 0 0 2px #171818,0 0 0 3px #0d0e0e}.watch-case:before{inset:3px}.phone:before{inset:2px}h2{font-size:37px}.persona-item img{height:145px}.phone-pair>.phone{width:195px}.phone-pair{min-height:550px}.phone-back{left:0}.phone-front{right:0}.setup-grid{grid-template-columns:1fr}.setup-grid article{display:grid;grid-template-columns:25px 1fr;column-gap:14px}.setup-grid h3{margin:0}.setup-grid p{grid-column:2;margin-top:8px}.document-hero h1{font-size:53px}.footer-top>div{font-size:11px;gap:17px}.footer-bottom{font-size:9px}.contact-card .button{font-size:12px;padding:13px 15px}}
+@media(max-width:430px){h1{font-size:55px}.hero-devices{gap:6px;min-height:340px;margin-left:-20px;margin-right:-20px}.hero-watch{width:112px}.hero-phone{width:158px}.hero-watch.first{margin-right:-5px}.hero-watch.last{margin-left:-5px}.hero-watch .device-caption{font-size:6px}.phone{padding:5px}.watch-case{padding:7.8% 6.4%}.watch-case:before{inset:3px}.phone:before{inset:2px}h2{font-size:37px}.persona-item img{height:145px}.phone-pair>.phone{width:195px}.phone-pair{min-height:550px}.phone-back{left:0}.phone-front{right:0}.setup-grid{grid-template-columns:1fr}.setup-grid article{display:grid;grid-template-columns:25px 1fr;column-gap:14px}.setup-grid h3{margin:0}.setup-grid p{grid-column:2;margin-top:8px}.document-hero h1{font-size:53px}.footer-top>div{font-size:11px;gap:17px}.footer-bottom{font-size:9px}.contact-card .button{font-size:12px;padding:13px 15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 .hero-watch>.watch,.hero-phone>.phone{width:100%}
 
 /* Actual device render cutouts; UI remains an unmodified simulator screenshot. */
-.phone{width:250px;aspect-ratio:642/1328;position:relative;isolation:isolate;background:none;padding:0;border:0;border-radius:0;box-shadow:none}
-.phone>.device-frame{position:absolute;max-width:none;width:159.5%;left:-29.6%;top:-7.55%;pointer-events:none;z-index:1}
-.phone-display{position:absolute;left:3.2%;top:1.75%;width:94.4%;height:96.6%;overflow:hidden;border-radius:14.5%/6.8%;background:#fff;z-index:2}
-.phone-display>img{width:100%;height:100%;object-fit:fill}
-.island{position:absolute;left:35%;top:1.6%;width:30%;height:3.55%;border-radius:99px;background:#050505}
+/* Complete lit-screen simulator captures retain the native bezel and UI together. */
+.phone{width:250px;aspect-ratio:630/1282;position:relative;isolation:isolate;background:none;padding:0;border:0;border-radius:0;box-shadow:none}
+.phone-capture{position:absolute;inset:0;overflow:hidden;-webkit-mask:url(iphone-capture-mask.svg) 0 0/100% 100% no-repeat;mask:url(iphone-capture-mask.svg) 0 0/100% 100% no-repeat}
+.phone-capture>img{position:absolute;max-width:none;width:349.20635%;height:124.80499%;left:-172.69841%;top:-9.9844%;object-fit:fill}
 .watch{width:310px;aspect-ratio:1;position:relative;filter:drop-shadow(0 20px 25px #0007);isolation:isolate}
 .watch>.device-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
 .watch-display{position:absolute;overflow:hidden;background:#000;transform-origin:center;z-index:2}
 .watch-display>img{width:100%;height:100%;object-fit:fill}
 .watch-display:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(130deg,#ffffff0c,transparent 35%)}
-.ultra .watch-display{left:7.55%;top:21.5%;width:35.65%;height:58.4%;border-radius:24%/14%;transform:skewY(1deg)}
-.series .watch-display{left:12.7%;top:24.4%;width:33.8%;height:53.5%;border-radius:25%/15%;transform:skewY(-1deg)}
+/* The angled Ultra needs its own screen contour, not a generic rounded rectangle. */
+.ultra:not(.front) .watch-display{left:7.98%;top:21.85%;width:34.61%;height:57.5%;border-radius:0;transform:none;box-shadow:none;-webkit-mask:url(ultra-screen-mask.svg) 0 0/100% 100% no-repeat;mask:url(ultra-screen-mask.svg) 0 0/100% 100% no-repeat}
+.series .watch-display{left:12.7%;top:24.8%;width:33.8%;height:52.8%;border-radius:0;transform:none;box-shadow:none;-webkit-mask:url(series-screen-mask.svg) 0 0/100% 100% no-repeat;mask:url(series-screen-mask.svg) 0 0/100% 100% no-repeat}
 .hero-devices{gap:34px;max-width:1000px;min-height:565px}
-.hero-watch{width:310px}.hero-watch.first{transform:rotate(-5deg) translateY(20px)}.hero-watch.last{transform:rotate(5deg) translateY(20px)}
+.hero-watch{width:310px}.hero-watch.first{transform:rotate(-3deg) translateY(20px)}.hero-watch.last{transform:rotate(5deg) translateY(20px)}
 .watch-showcase>.watch{width:390px;transform:rotate(5deg)}
 @media(max-width:1000px){.hero-watch{width:250px}.hero-devices{gap:22px}}
 @media(max-width:760px){.hero-watch{width:145px}.hero-devices{gap:8px;min-height:395px}.watch-showcase>.watch{width:350px}.hero-watch .device-caption{font-size:6px;letter-spacing:.12em}.hero-phone .device-caption{font-size:6px}.watch-showcase{min-height:430px}}
@@ -29,3 +29,14 @@
 .watch.front{aspect-ratio:1313/1198}.watch.front .watch-display{left:26.3%;top:17.75%;width:48.2%;height:64.35%;border-radius:25%/22%;transform:none}.watch-showcase>.watch.front{width:480px;transform:rotate(3deg)}
 @media(max-width:760px){.watch-showcase>.watch.front{width:400px}}
 .hero,.watch-showcase{overflow:clip}
+
+/* Native component renders fill the two selected face slots. */
+.face-cut-mode{position:absolute;left:5.8%;top:29%;width:26%;aspect-ratio:1;background:#000}
+.face-cut-mode>img{width:100%;height:100%;object-fit:contain}
+.face-cyber-level{position:absolute;left:0;top:58%;width:100%;height:35%;background:#000}
+.face-cyber-level>img{width:100%;height:100%;object-fit:fill}
+.watch-feature>*{min-width:0}
+.phone-feature{overflow:clip}
+.phone-back{left:24px}.phone-front{right:24px}
+@media(max-width:760px){.phone-back{left:18px}.phone-front{right:18px}}
+@media(max-width:760px){.watch-showcase>.watch.front{width:min(400px,100%)}}
